@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Login Page
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    style.
+      body {
+        background-image: url('https://images.unsplash.com/photo-1698562712238-848f050ba47e?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pY29uLXJlZ2FyZHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+      }
+      .container {
+        height: 100vh;
+        margin-top: 30vh;
+      }
+      .col-md-6 {
+        width: 20%;
+      }
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 20px; /* Rounded corners */
+        transition: transform 0.2s; /* Add hover effect */
+      }
+      .card:hover {
+        transform: scale(1.05); /* Enlarge on hover */
+      }
+  body
+    .container
+      .row.justify-content-center.align-items-center
+        .col-md-6
+          .card
+            .card-body
+              h2.card-title.text-center Login
+              form(action="/login" method="post")
+                .form-group
+                    label(for="email") Email
+                    input#email.form-control(type="text", name="email", placeholder="Enter your Email", pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}", title="Enter a valid email address")
+            
+                .form-group
+                  label(for="password") Password
+                  input#password.form-control(type="password", name="password", placeholder="Enter your password")
+                .text-center
+                  button.btn.btn-primary(type="submit") Submit
+              .text-center.mt-3
+                a(href="./signup") Make a new account
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")

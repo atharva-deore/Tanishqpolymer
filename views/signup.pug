@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Sign Up
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    style.
+      body {
+        background-image: url('https://images.unsplash.com/photo-1698562712238-848f050ba47e?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pY29uLXJlZ2FyZHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+      }
+      .container {
+        height: 100vh;
+        
+      }
+      .col-md-6 {
+        width: 20%;
+      }
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 20px; /* Rounded corners */
+        transition: transform 0.2s; /* Add hover effect */
+      }
+      .card:hover {
+        transform: scale(1.05); /* Enlarge on hover */
+      }
+  body
+    .container
+      .row.justify-content-center.align-items-center(style="height: 100vh;")
+        .col-md-6
+          .card
+            .card-body
+              h2.card-title.text-center Sign Up
+              form(action="/signup" method="post")
+                .form-group
+                  label(for="email") Email
+                  input#email.form-control(type="email", name="email", placeholder="Enter your Email", required)
+                .form-group
+                  label(for="password") Password
+                  input#password.form-control(type="password", name="password", placeholder="Enter your password", required)
+                .text-center
+                  button.btn.btn-primary(type="submit") Submit
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
